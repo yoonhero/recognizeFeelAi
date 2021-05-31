@@ -24,13 +24,6 @@ def term_frequency(doc):
 
 model = load_model('movie_review_model.h5')
 
-review = "아주 재미 있어요"
-token = tokenize(review)
-
-tf = term_frequency(token)
-data = np.expand_dims(np.asarray(tf).astype('float32'), axis=0)
-float(model.predict(data))
-
 
 def predict_review(review):
     token = tokenize(review)
